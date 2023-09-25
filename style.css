@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  background-color: rgba(4, 186, 252, 0.267);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid black;
+}
+
+#container {
+  padding: 4vh 4vw;
+  width: 400px;
+  line-height: 30px;
+  border: 4px solid rgb(70, 85, 215);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+#container h2 {
+  color: blue;
+  font-weight: 900;
+}
+
+#container input {
+  background-color: rgba(88, 186, 216, 0.279);
+  outline: none;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  width: 85%;
+  margin: 3vh auto;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+#container div img {
+  width: 200px;
+  padding: 15px;
+}
+.showQR {
+  height: 200px;
+}
+
+#container button {
+  padding: 1vh 2vw;
+  border-radius: 10px;
+  margin-top: 2vh;
+  background-color: rgb(149, 76, 217);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+#container button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.error {
+  animation: error 0.1s linear 2;
+  background-color: red;
+}
+
+#alerts {
+  background-color: transparent;
+  height: 80vh;
+  width: 19rem;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  pointer-events: none;
+}
+
+.message {
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 80%;
+  display: flex;
+  border-radius: 3px;
+  justify-content: center;
+  box-shadow: 0 0 40px #282424;
+  font-weight: 800;
+  align-items: center;
+}
+
+.message.red::after {
+  content: "";
+  width: 80%;
+  height: 5px;
+  background-color: rgb(255, 0, 0);
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+}
+
+.message.green::after {
+  content: "";
+  width: 80%;
+  height: 5px;
+  background-color: rgb(0, 255, 0);
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+}
+
+@keyframes error {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
